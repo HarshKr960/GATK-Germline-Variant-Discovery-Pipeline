@@ -3,7 +3,7 @@ GATK Germline Variant Discovery Pipeline (GRCh38)
 This repository contains a stepwise GATK 4.x pipeline for germline variant discovery on Illumina whole-genome/exome sequencing data. The workflow follows GATK Best Practices, from read trimming and alignment through variant quality score recalibration (VQSR) and optional post-VQSR QC.
 
 📂 Repository Structure 
-.
+```
 ├── Fastp-adapter.sh                  # Step 0: adapter/quality trimming + HTML/JSON report (fastp)
 ├── alignbwa.sh                       # Step 1: align to GRCh38 with BWA-MEM, sort & index
 ├── 1-step-gatk.sh                    # Step 2: MarkDuplicates (GATK)
@@ -16,7 +16,7 @@ This repository contains a stepwise GATK 4.x pipeline for germline variant disco
 ├── 9-step-gatk-QC-PASS-Variant.sh    # Step 9: Apply VQSR to INDELs, emit final PASS variants
 ├── post_vqsr_analysis.sh             # Step 10 (optional): post-VQSR QC & reporting (bcftools/MultiQC)
 └── tutorial_intervals.list           # Optional target regions for quick tutorial runs / chr20 demo
-
+```
 
 Fastp-adapter.sh runs paired-end adapter/quality trimming and emits fastp_report.html/json. 
 
